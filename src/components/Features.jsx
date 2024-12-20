@@ -74,7 +74,7 @@ export default function Features() {
           <motion.h2 
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
-            className="text-5xl font-bold text-gray-900 mb-6 leading-tight"
+            className="text-5xl font-light text-gray-900 mb-6 leading-tight"
           >
             Revolutionize Your
             <span className="bg-gradient-to-r from-[#7C3AED] to-[#FF4D8F] bg-clip-text text-transparent"> Hiring Process</span>
