@@ -1,5 +1,7 @@
+import Features from "./components/Features"
 import Header from "./components/Header"
 import HeroSection from "./components/HeroSection"
+import AnimatedLogoCloud from "./components/LogoCloud"
 
 function App() {
 
@@ -8,6 +10,8 @@ function App() {
    <>
     <Header/>
     <HeroSection />
+    <AnimatedLogoCloud/>
+    <Features />
    </>
   )
 }
