@@ -13,7 +13,9 @@ function App() {
     <HeroSection />
     <AnimatedLogoCloud/>
     <Features />
-    <SolutionsSection />
+    <div className="min-h-screen bg-white">
+      <SolutionsSection />
+    </div>
    </>
   )
 }

@@ -1,7 +1,5 @@
 import { motion } from 'framer-motion';
-
 import FeaturesCard from './FeaturesCard';
-
 import { Brain, Clock, PieChart, Shield, Users, VideoIcon } from 'lucide-react';
 
 export const features = [
@@ -91,6 +89,24 @@ export default function Features() {
           </motion.p>
         </div>
 
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.4 }}
+          className="relative mx-auto mb-24 max-w-5xl"
+        >
+          <div className="aspect-[16/9] overflow-hidden rounded-2xl bg-gray-100 shadow-2xl">
+            <img
+              src="https://images.unsplash.com/photo-1664575198308-3959904fa430?q=80&w=2940&auto=format&fit=crop"
+              alt="AI Interview Platform Dashboard"
+              className="w-full h-full object-cover"
+            />
+          </div>
+          {/* Decorative elements */}
+          <div className="absolute -left-4 -top-4 -z-10 w-full h-full rounded-2xl bg-gradient-to-r from-purple-200 to-pink-200 opacity-50"></div>
+          <div className="absolute -right-4 -bottom-4 -z-10 w-full h-full rounded-2xl bg-gradient-to-r from-purple-200 to-pink-200 opacity-50"></div>
+        </motion.div>
+    
         <motion.div 
           variants={container}
           initial="hidden"

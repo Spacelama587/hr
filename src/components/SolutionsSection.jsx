@@ -50,12 +50,8 @@ function SolutionsSection() {
   Innovative Solutions for Modern Hiring
 </h2>
 <p
-  className="text-lg text-gray-600 max-w-2xl mx-auto font-light"
-  style={{
-    background: "linear-gradient(to right, #FFD700, #8A2BE2, #00CED1, #FF69B4)",
-    WebkitBackgroundClip: "text",
-    color: "transparent",
-  }}
+  className="text-lg text-gray-600 max-w-2xl mx-auto font-medium"
+
 >
   Transform your technical hiring process with our AI-powered platform that combines
   accuracy, efficiency, and fairness. Revolutionize your recruitment journey with
