@@ -129,7 +129,13 @@ function SolutionsSection() {
               />
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Transform your technical hiring process with our AI-powered platform that combines
+              Transform your technical hiring process with our <span className="text-xl font-light  mb-6"
+  style={{
+    background: "linear-gradient(to right, #FFD700, #8A2BE2, #00CED1, #FF69B4)",
+    WebkitBackgroundClip: "text",
+    color: "transparent",
+  }} >AI-powered platform </span> that combines
+
               accuracy, efficiency, and fairness. Revolutionize your recruitment journey with
               cutting-edge technology.
             </p>
