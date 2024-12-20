@@ -19,7 +19,7 @@ function SolutionCard({ title, description, isReversed, imagePlaceholder }) {
         </div>
   
         <div className="flex-1 text-left">
-          <h3 className="text-3xl font-bold text-gray-900 mb-4 md:text-7xl">{title}</h3>
+          <h3 className="text-3xl font-bold text-gray-900 mb-4 md:text-7xl bg-gradient-to-r from-[#7C3AED] to-[#FF4D8F] bg-clip-text text-transparent">{title}</h3>
           <p className="text-gray-600 mb-6 leading-relaxed">{description}</p>
           <motion.button
             whileHover={{ scale: 1.1, backgroundColor: '#e91e63', color: '#ffffff' }}
