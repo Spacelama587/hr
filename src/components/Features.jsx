@@ -1,130 +1,131 @@
+import React from 'react';
 import { motion } from 'framer-motion';
-import FeaturesCard from './FeaturesCard';
 import { Brain, Clock, PieChart, Shield, Users, VideoIcon } from 'lucide-react';
 
-export const features = [
+const features = [
   {
     icon: Brain,
-    title: "AI-Powered Intelligence",
-    description:
-      "Advanced algorithms analyze candidate responses in real-time, providing deep insights into skills and potential.",
-    color: "bg-purple-50",
+    title: "Smart Analytics",
+    description: "Leverage advanced algorithms and machine learning to gain deeper insights into your business metrics and performance indicators.",
+    color: "bg-purple-100",
   },
   {
     icon: Clock,
-    title: "Time-Efficient Screening",
-    description:
-      "Automate initial interviews to save countless hours while maintaining a personal touch in your hiring process.",
-    color: "bg-pink-50",
+    title: "Time Management",
+    description: "Streamline your workflow with automated scheduling and intelligent time tracking features.",
+    color: "bg-pink-100",
   },
   {
     icon: VideoIcon,
-    title: "Video Interviews",
-    description:
-      "Conduct seamless video interviews with AI-assisted question generation and response analysis.",
-    color: "bg-[#E0FBFC]",
+    title: "Video Conferencing",
+    description: "Connect with your team through high-quality video calls with built-in collaboration tools.",
+    color: "bg-blue-100",
   },
   {
     icon: PieChart,
-    title: "Data-Driven Insights",
-    description:
-      "Get comprehensive analytics and candidate scorecards to make informed hiring decisions.",
-    color: "bg-amber-50",
+    title: "Performance Metrics",
+    description: "Track and visualize key performance indicators with interactive dashboards and reports.",
+    color: "bg-amber-100",
   },
   {
     icon: Users,
-    title: "Collaborative Hiring",
-    description:
-      "Share candidate interviews and feedback with team members for better decision making.",
-    color: "bg-pink-50",
+    title: "Team Collaboration",
+    description: "Foster teamwork with integrated tools for sharing, commenting, and real-time collaboration.",
+    color: "bg-pink-100",
   },
   {
     icon: Shield,
-    title: "Bias Reduction",
-    description:
-      "Ensure fair evaluation with AI-powered bias detection and standardized interview processes.",
-    color: "bg-[#E0FBFC]",
+    title: "Enhanced Security",
+    description: "Protect your data with enterprise-grade security features and compliance standards.",
+    color: "bg-blue-100",
   },
 ];
 
-const container = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.2
-    }
-  }
+const FeatureCard = ({ icon: Icon, title, description, color, index }) => {
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ delay: index * 0.1 }}
+      className={`${color} rounded-2xl p-8 shadow-sm hover:shadow-lg transition-all duration-300`}
+    >
+      <div className="flex items-center justify-center w-16 h-16 rounded-xl bg-white mb-6">
+        <Icon className="w-8 h-8 text-purple-600" />
+      </div>
+      <div className="relative">
+        <span className="absolute -left-6 top-1 text-4xl font-bold text-black/5">
+          {String(index + 1).padStart(2, '0')}
+        </span>
+        <h3 className="text-xl font-bold mb-3 bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent">
+          {title}
+        </h3>
+        <p className="text-gray-600 leading-relaxed">
+          {description}
+        </p>
+      </div>
+    </motion.div>
+  );
 };
 
-export default function Features() {
+const Features = () => {
   return (
     <section className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-20">
-          <div className="inline-block">
-            <motion.span
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              className="inline-block px-4 py-2 rounded-full bg-purple-50 text-[#7C3AED] text-sm font-semibold mb-4"
-            >
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            className="inline-block"
+          >
+            <span className="inline-block px-4 py-2 rounded-full bg-purple-100 text-purple-600 text-sm font-semibold mb-4">
               Features
-            </motion.span>
-          </div>
-          <motion.h2 
+            </span>
+          </motion.div>
+          
+          <motion.h2
             initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="text-5xl font-light text-gray-900 mb-6 leading-tight"
+            whileInView={{ opacity: 1, y: 0 }}
+            className="text-5xl font-light text-gray-900 mb-6"
           >
-            Revolutionize Your
-            <span className="bg-gradient-to-r from-[#7C3AED] to-[#FF4D8F] bg-clip-text text-transparent"> Hiring Process</span>
+            Transform Your Workflow with
+            <span className="bg-gradient-to-r from-purple-600 to-pink-600 bg-clip-text text-transparent"> Powerful Features</span>
           </motion.h2>
-          <motion.p 
+          
+          <motion.p
             initial={{ opacity: 0, y: -20 }}
-            animate={{ opacity: 1, y: 0 }}
+            whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
-            className="text-xl text-gray-600 max-w-2xl mx-auto leading-relaxed"
+            className="text-xl text-gray-600 max-w-2xl mx-auto"
           >
-            Streamline recruitment with our AI-powered interview platform that transforms how you evaluate and select candidates.
+            Discover tools designed to enhance productivity and streamline your daily operations.
           </motion.p>
         </div>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.4 }}
           className="relative mx-auto mb-24 max-w-5xl"
         >
-          <div className="aspect-[16/9] overflow-hidden rounded-2xl bg-gray-100 shadow-2xl">
+          <div className="aspect-video overflow-hidden rounded-2xl bg-gray-100 shadow-2xl">
             <img
-              src="https://images.unsplash.com/photo-1664575198308-3959904fa430?q=80&w=2940&auto=format&fit=crop"
-              alt="AI Interview Platform Dashboard"
-              className="w-full h-full object-cover"
+              src="/Untitled2.png"
+              alt="Platform Dashboard"
+              className="object-cover"
             />
           </div>
-          {/* Decorative elements */}
-          <div className="absolute -left-4 -top-4 -z-10 w-full h-full rounded-2xl bg-gradient-to-r from-purple-200 to-pink-200 opacity-50"></div>
-          <div className="absolute -right-4 -bottom-4 -z-10 w-full h-full rounded-2xl bg-gradient-to-r from-purple-200 to-pink-200 opacity-50"></div>
+          <div className="absolute -left-4 -top-4 -z-10 w-full h-full rounded-2xl bg-gradient-to-r from-purple-200 to-pink-200 opacity-50" />
+          <div className="absolute -right-4 -bottom-4 -z-10 w-full h-full rounded-2xl bg-gradient-to-r from-purple-200 to-pink-200 opacity-50" />
         </motion.div>
-    
-        <motion.div 
-          variants={container}
-          initial="hidden"
-          animate="show"
-          className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
-        >
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <FeaturesCard
-              key={index}
-              icon={<feature.icon className="w-8 h-8 text-[#7C3AED]" />}
-              title={feature.title}
-              description={feature.description}
-              color={feature.color}
-              index={index}
-            />
+            <FeatureCard key={index} {...feature} index={index} />
           ))}
-        </motion.div>
+        </div>
       </div>
     </section>
   );
-}
+};
+
+export default Features;
