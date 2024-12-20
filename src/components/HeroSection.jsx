@@ -75,7 +75,7 @@ const HeroSection = () => {
             variants={itemVariants}
             className="text-lg md:text-xl text-gray-600 mb-8 max-w-2xl mx-auto"
           >
-            Streamline your HR processes, enhance employee experience, and drive organizational growth with our intelligent HR management platform.
+            Streamline your Hiring processes, enhance employee experience, and drive organizational growth with our intelligent AI driven HR hiring platform.
           </motion.p>
 
           <motion.div
